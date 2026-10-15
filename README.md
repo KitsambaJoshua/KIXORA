@@ -1,51 +1,28 @@
 # KIXORA — Connect. Share. Belong.
 
-A responsive, static front-end prototype for KIXORA, designed by Kitamba Joshua. It is organized for GitHub Pages and can be expanded into a full social platform later.
+A responsive, Instagram-inspired social-network front-end prototype for GitHub Pages. It includes a light/dark theme and separate app views for Home, Explore, Clips, Messages, Communities, Notifications, Profile, Saved, and Settings.
 
-## Preview locally
-
-1. Extract the ZIP file.
-2. Open `index.html` in a modern browser. For the most reliable local preview, use VS Code's Live Server extension or run a simple local web server.
-3. No build step or package installation is required.
+## Run locally
+Open `index.html` in a browser, or serve this folder with any static web server. The project uses plain HTML, CSS, and JavaScript; no build step or package install is needed.
 
 ## Publish with GitHub Pages
+1. Create a GitHub repository named `KIXORA` (or another name you prefer).
+2. Upload the **contents** of this folder to the repository root. `index.html` must be in the root.
+3. Open **Settings → Pages**.
+4. Under Build and deployment, select **Deploy from a branch**, choose `main` and `/(root)`, then save.
+5. Wait for GitHub Pages to publish the site.
 
-1. Create a GitHub repository, for example `KIXORA`.
-2. Upload the **contents** of this folder (the `index.html`, `css/`, `js/`, and `README.md` files) to the repository root. Do not upload only the ZIP itself if you want GitHub Pages to serve the website.
-3. In the repository, open **Settings → Pages**.
-4. Under the build/deployment source, choose **Deploy from a branch**, select `main` and `/(root)`, then save.
-5. Wait for the Pages deployment to finish. GitHub will show the public website URL on the Pages settings screen.
+## Included interactions
+- Sign-up and log-in demo flow; the name, username, and email flow into the profile and settings.
+- Light (white) and dark (black/navy) themes.
+- Edit profile, including a small profile-image upload.
+- Create posts, attach small images, like, comment, save, share, and view saved posts.
+- Explore search for sample people and posts, follow/unfollow sample profiles.
+- Local demo conversations, new-message dialog, and message sending.
+- Community join/create demo, notifications, profile tabs, settings controls, and JSON data export.
+- Responsive mobile navigation and desktop sidebar.
 
-## Folder structure
+## Important production limitations
+This is a **front-end prototype**, not a secure production social network. Demo data is saved in the current browser's local storage and does not sync between users or devices. Do not use real passwords or sensitive personal information with this demo. Before a public launch, replace the demo sign-up/login with a secure authentication provider and connect a database, authorization rules, media storage, and backend services for persistent posts, real messaging, video streaming, community membership, notifications, account recovery, and email verification. A browser-only app cannot safely provide these features by itself.
 
-```text
-KIXORA-Website/
-├── index.html          # Main app interface
-├── css/
-│   └── styles.css      # Responsive layout, theme, and visual styling
-├── js/
-│   └── app.js          # Navigation and front-end demo interactions
-└── README.md           # Setup and GitHub Pages instructions
-```
-
-## What's included
-
-- Premium dark navy design with cyan, blue, and purple accents
-- Responsive desktop, tablet, and mobile layouts
-- Home feed, stories row, post composer, sample feed posts, and suggested creators
-- Demo pages for Clips, Explore, Messages, Communities, Notifications, Profile, Saved Posts, and Settings
-- Light/dark theme toggle
-- Local demo interactions for likes, comments, following, saving, search, and creating a text post
-- Mobile bottom navigation and desktop sidebar navigation
-
-## Important limitations
-
-This ZIP is a **front-end prototype**, not a complete production social network. Sample content is illustrative. It does not yet include real account registration, secure login, persistent database storage, real-time messaging, actual video/photo upload, push notifications, moderation, or production privacy/security controls. Most interactions are local demonstrations and may reset when the page is refreshed. A backend and security review are needed before launching those features to the public.
-
-The site uses Google Fonts when internet access is available; system fallbacks are provided. The main layout and interactions do not require a JavaScript framework or paid service.
-
-## Branding
-
-**KIXORA**  
-**Connect. Share. Belong.**  
-Designed by Kitamba Joshua
+Designed by Kitamba Joshua.
