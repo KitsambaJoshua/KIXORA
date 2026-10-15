@@ -38,7 +38,7 @@ function defaultPosts(){return [
 {id:5,person:'g4',text:'Choose people who celebrate your growth, respect your peace and remind you of your worth. 💜',photo:img('photo-1511988617509-a57c8a288659'),quote:'“Protect your peace. Keep your heart kind.”',likes:512,comments:[['Naomi MUKITE','Always!']]},
 ].map(p=>({...p,created:'2h'}))}
 function load(){try{const s=JSON.parse(localStorage.getItem('kixora-professional-v3'));if(s){user=s.user||null;posts=s.posts||defaultPosts();likes=s.likes||[];saved=s.saved||[];friends=s.friends||[];requests=s.requests||[];sent=s.sent||[];messages=s.messages||{};joined=s.joined||[];stories=s.stories||[];profile=s.profile||{}}else posts=defaultPosts()}catch{posts=defaultPosts()}if(!posts.length)posts=defaultPosts()}
-function persist(){try{localStorage.setItem('kixora-professional-v3',JSON.stringify({user,posts,likes,saved,friends,requests,sent,messages,joined,stories,profile}))}catch{}}
+function persist(){try{const old=JSON.parse(localStorage.getItem('kixora-professional-v3')||'{}');localStorage.setItem('kixora-professional-v3',JSON.stringify({...old,user,posts,likes,saved,friends,requests,sent,messages,joined,stories,profile}))}catch{}}
 function toast(s){const e=$('#toast');e.textContent=s;e.classList.add('show');setTimeout(()=>e.classList.remove('show'),2600)}
 function setTheme(dark){document.body.classList.toggle('dark',dark);const label=dark?'☀ Light mode':'☾ Dark mode';$('#themeBtn').textContent=label;$('#themeSide').textContent=label;localStorage.setItem('kixora-theme',dark?'dark':'light')}
 function toggleTheme(){setTheme(!document.body.classList.contains('dark'))}
