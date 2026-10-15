@@ -1,28 +1,21 @@
 # KIXORA — Connect. Share. Belong.
 
-A responsive, Instagram-inspired social-network front-end prototype for GitHub Pages. It includes a light/dark theme and separate app views for Home, Explore, Clips, Messages, Communities, Notifications, Profile, Saved, and Settings.
+Responsive front-end prototype with an Instagram-inspired desktop layout: left navigation, central feed, and right-side suggestions.
 
-## Run locally
-Open `index.html` in a browser, or serve this folder with any static web server. The project uses plain HTML, CSS, and JavaScript; no build step or package install is needed.
+## Features
+- Login/sign-up screen first; account name and email appear in the app.
+- White and dark modes.
+- Feed with starter posts, post creation, likes, comments, save and share actions.
+- Explore, KIXORA Clips preview, Messages, Friends, Communities, Notifications, Profile and Settings.
+- Ten starter demo profiles immediately send friend requests to a new account. The user can accept or decline each request.
+- Profile shows counts for posts, friends, following, and followers.
+- K AI chat has local scripted responses about using KIXORA, friend requests, themes, messaging and writing prompts.
+- Data persists in the browser using localStorage.
 
-## Publish with GitHub Pages
-1. Create a GitHub repository named `KIXORA` (or another name you prefer).
-2. Upload the **contents** of this folder to the repository root. `index.html` must be in the root.
-3. Open **Settings → Pages**.
-4. Under Build and deployment, select **Deploy from a branch**, choose `main` and `/(root)`, then save.
-5. Wait for GitHub Pages to publish the site.
+## Run
+Open `index.html` in a modern browser, or upload the files to a GitHub repository and enable GitHub Pages. Create a demo account using a name, email and password of at least six characters.
 
-## Included interactions
-- Sign-up and log-in demo flow; the name, username, and email flow into the profile and settings.
-- Light (white) and dark (black/navy) themes.
-- Edit profile, including a small profile-image upload.
-- Create posts, attach small images, like, comment, save, share, and view saved posts.
-- Explore search for sample people and posts, follow/unfollow sample profiles.
-- Local demo conversations, new-message dialog, and message sending.
-- Community join/create demo, notifications, profile tabs, settings controls, and JSON data export.
-- Responsive mobile navigation and desktop sidebar.
-
-## Important production limitations
-This is a **front-end prototype**, not a secure production social network. Demo data is saved in the current browser's local storage and does not sync between users or devices. Do not use real passwords or sensitive personal information with this demo. Before a public launch, replace the demo sign-up/login with a secure authentication provider and connect a database, authorization rules, media storage, and backend services for persistent posts, real messaging, video streaming, community membership, notifications, account recovery, and email verification. A browser-only app cannot safely provide these features by itself.
+## Important
+This is a prototype, not a live multi-user social network. The ten starter profiles are demo profiles, not real people. K AI is a scripted demo assistant and is not connected to a live AI model. Browser-local posts, messages and friend requests do not sync to other users/devices. A real launch requires secure authentication, shared database, server-side permissions, AI integration via a protected backend, video storage, moderation/reporting and a privacy policy. Never place secret API keys in front-end code.
 
 Designed by Kitamba Joshua.
