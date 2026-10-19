@@ -134,7 +134,7 @@ if(t.id==='recordVoice'){if(!navigator.mediaDevices?.getUserMedia||!window.Media
 if(t.id==='stopVoice'&&voiceRecorder?.state==='recording'){voiceRecorder.stop();$('#voiceControls')?.classList.add('hidden');$('#sendForm')?.classList.remove('hidden');const st=$('#voiceStatus');if(st)st.textContent='Processing voice note…'}
 if(t.id==='cancelVoice'){if(voiceRecorder?.state==='recording'){voiceRecorder.onstop=null;voiceRecorder.stop()}voiceStream?.getTracks().forEach(track=>track.stop());voiceStream=null;voiceRecorder=null;$('#voiceControls')?.classList.add('hidden');$('#sendForm')?.classList.remove('hidden');const st=$('#voiceStatus');if(st)st.textContent='Recording cancelled.'}
 });
-$('#topPost').onclick=()=>compose();
+$('#topPost').onclick=()=>createMenu();
 $('#searchInput').addEventListener('input',e=>{query=e.target.value;if(page!=='home'&&page!=='explore')go('explore');else render()});
 load();setTheme(localStorage.getItem('kixora-theme')==='dark');if(user){document.body.classList.add('app-active');$('#auth').classList.add('hidden');$('#app').classList.remove('hidden');render()}else setAuthMode('login');
 </script></body></html>
